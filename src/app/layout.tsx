@@ -9,11 +9,34 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "600", "700"], 
 const inter = Inter({ subsets: ["latin"], weight: ["900"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dexfortify.iamdex.codes"),
   title: "DexFortify — Network Defense Visualizer",
   description:
     "Interactive network topology simulator: defend against simulated attacks by configuring firewalls and IDS rules.",
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/dexfortify-favicon.png",
+    shortcut: "/dexfortify-favicon.png",
+    apple: "/dexfortify-favicon.png",
+  },
+  openGraph: {
+    title: "DexFortify — Network Defense Visualizer",
+    description:
+      "Battle simulated cyber threats. Configure firewalls and deep packet inspection (IDS) in real-time.",
+    url: "https://dexfortify.iamdex.codes",
+    siteName: "DexFortify",
+    type: "website",
+    images: [{ url: "/dexfortify-og.png", width: 1200, height: 630, alt: "DexFortify Dashboard" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DexFortify — Network Defense Visualizer",
+    description: "Interactive network security simulator. Defend the network from real-time attacks.",
+    creator: "@SekharDibyanshu",
+    images: ["/dexfortify-og.png"],
+  },
 };
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
